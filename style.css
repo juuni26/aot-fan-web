@@ -1,0 +1,178 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: blanchedalmond;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a{
+color: antiquewhite;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+font-family: sans-serif;
+
+}
+
+.landing {
+
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(./img/gta.jpg);
+  background-size: cover;
+  opacity: .8;
+}
+
+.wrapper-head {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+  padding-top: 10vh;
+  background-color: rgba(0, 0, 0, 0.658);
+  min-height: 100vh;
+  color: rgb(236, 233, 229);
+}
+
+.wrapper-head h1 {
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.wrapper-head p {
+  line-height: 1.5;
+}
+
+.synopsis {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgb(235, 199, 156);
+  margin-bottom: 10px;
+}
+
+.video-summary {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.video-summary .iframe {
+  width: 100%;
+  height: 100vh;
+}
+
+.creator-link {
+  color: rgb(58, 57, 9);
+  text-decoration: none;
+}
+.creator-link:hover {
+  color: rgb(63, 63, 26);
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+
+}
+
+.sequel {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.sequel h2:hover { 
+  text-decoration: underline solid .5px rgb(163, 78, 78);
+}
+/* pseudo element */
+
+.sequel-title {
+  position: relative;
+  display: block;
+  transition: .5s ease-in-out;  
+  text-transform: capitalize;  
+  text-shadow: 1px 1px #f5da3f;
+}
+.sequel-title::after {
+content: "Normal order to watch";
+color: rgb(243, 49, 49);
+position: absolute;
+top: -10%;
+right: 10%;
+font-size: 12px;
+transform: rotate(2deg);
+display: inline-block;
+opacity: 0;
+}
+.with-ova::after {
+  content: "Recommended order";
+}
+
+.sequel-title:hover.sequel-title::after {
+opacity: 1;
+}
+
+.sequel-list {
+  text-align: left;
+}
+
+.sequel-list li {  
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+
+.sequel-list li:last-child{
+  margin-bottom: 0;
+}
+
+.sequel-list li:hover {
+  background-color: rgb(197, 146, 69);
+}
+
+.upcoming {
+  position: relative;    
+}
+
+.upcoming::after {
+  transition: opacity .4s ease-in;
+content: "Upcoming";
+font-weight: 700;
+color: rgb(211, 0, 0);
+position: absolute;
+top: 0;
+right: 5%;
+font-size: 14px;
+transform: rotate(1deg);
+display: inline-block;
+opacity: 0;
+}
+
+.upcoming:hover.upcoming::after {
+opacity: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 7px;
+  background-color: rgb(231, 158, 68);
+  
+}
+footer small {
+  display: block;
+}
+
+footer small:first-child {
+  margin-bottom: 2px;
+}
